@@ -186,4 +186,12 @@ def _demo() -> None:
     print(f"  Mean P&L   : {results['mean_pnl']:,.2f}")
     print(f"  Std P&L    : {results['std_pnl']:,.2f}")
     print(f"  VaR        : {results['VaR']:,.2f}")
-    print(f
+    print(f"  Expected Shortfall: {results['ES']:,.2f}")
+    print()
+    print("Results (as % of portfolio):")
+    print(f"  VaR %      : {results['VaR'] / cfg.initial_value: .3%}")
+    print(f"  ES %       : {results['ES'] / cfg.initial_value: .3%}")
+
+
+if __name__ == "__main__":
+    _demo()
